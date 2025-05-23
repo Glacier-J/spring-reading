@@ -17,7 +17,7 @@ public class MyBeanPostProcessor implements BeanPostProcessor {
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("MyBeanPostProcessor#postProcessBeforeInitialization方法被调用了,Bean名称 = " + beanName);
+        System.out.println("MyBeanPostProcessor#postProcessAfterInitialization方法被调用了,Bean名称 = " + beanName);
         return bean;
     }
 }

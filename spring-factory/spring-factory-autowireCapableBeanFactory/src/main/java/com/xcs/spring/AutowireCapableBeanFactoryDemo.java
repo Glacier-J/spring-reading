@@ -31,16 +31,16 @@ public class AutowireCapableBeanFactoryDemo {
         AutowireCapableBeanFactory beanFactory = applicationContext.getAutowireCapableBeanFactory();
 
         // 创建指定Bean名称的实例
-        // createBean(beanFactory);
+         createBean(beanFactory);
 
         // 对给定的Bean实例进行进一步的配置
-        // configureBean(beanFactory);
+//         configureBean(beanFactory);
 
         // 对给定的Bean实例进行自动装配
-        // autowireBean(beanFactory);
+//         autowireBean(beanFactory);
 
         // 使用指定的自动装配模式创建Bean实例
-        // autowire(beanFactory);
+//         autowire(beanFactory);
 
         // 对给定的Bean实例的属性进行自动装配
         // autowireBeanProperties(beanFactory);
@@ -55,7 +55,7 @@ public class AutowireCapableBeanFactoryDemo {
         // destroyBean(beanFactory);
 
         // 解析Bean之间的依赖关系
-        // resolveDependency(beanFactory);
+         resolveDependency(beanFactory);
     }
 
     private static void createBean(AutowireCapableBeanFactory beanFactory) {
@@ -66,7 +66,7 @@ public class AutowireCapableBeanFactoryDemo {
     private static void configureBean(AutowireCapableBeanFactory beanFactory) {
         // 配置一个RootBeanDefinition
         ((DefaultListableBeanFactory) beanFactory).registerBeanDefinition("myService", new RootBeanDefinition(MyService.class));
-
+        System.out.println(">>> 已有注册的Bean"+beanFactory.getBean("myService"));
         MyService myService = new MyService();
         System.out.println("调用configureBean前,MyService = " + myService);
         beanFactory.configureBean(myService, "myService");

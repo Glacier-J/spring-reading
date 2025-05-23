@@ -32,10 +32,10 @@ public class HierarchicalBeanFactoryDemo {
 
         // 判断本地 BeanFactory 是否包含指定名称的 bean
         boolean containsLocalBean = childHierarchicalBeanFactory.containsLocalBean("myBean");
-        System.out.println("判断本地BeanFactory是否包含指定名称的Bean: " + containsLocalBean);
+        System.out.println("判断本地BeanFactory是否包含指定名称的Bean: " + containsLocalBean); // false
 
         // 判断整个 BeanFactory 是否包含指定名称的 bean
         boolean containsBean = childHierarchicalBeanFactory.containsBean("myBean");
-        System.out.println("判断整个BeanFactory是否包含指定名称的Bean: " + containsBean);
+        System.out.println("判断整个BeanFactory是否包含指定名称的Bean: " + containsBean);// true
     }
 }
