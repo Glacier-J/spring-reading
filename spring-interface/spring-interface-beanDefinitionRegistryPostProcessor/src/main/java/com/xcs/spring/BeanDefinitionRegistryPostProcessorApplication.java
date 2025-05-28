@@ -11,8 +11,19 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class BeanDefinitionRegistryPostProcessorApplication {
 
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MyConfiguration.class);
-        MySimpleBean mySimpleBean1 = context.getBean(MySimpleBean.class);
-        mySimpleBean1.show();
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+//        context.register(MyConfiguration.class);
+//       扫描包
+        context.scan("com.xcs.spring");
+        context.refresh();
+        if(context.containsBean("MyConfiguration")){
+            MyConfiguration myConfiguration = context.getBean(MyConfiguration.class);
+            System.out.println(">>> myConfiguration:"+myConfiguration);
+        }
+        if(context.containsBean("mySimpleBean")){
+            MySimpleBean mySimpleBean1 = context.getBean(MySimpleBean.class);
+            mySimpleBean1.show();
+        }
+
     }
 }

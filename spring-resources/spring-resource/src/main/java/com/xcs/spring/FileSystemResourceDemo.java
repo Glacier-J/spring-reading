@@ -12,7 +12,7 @@ import java.io.InputStream;
 public class FileSystemResourceDemo {
     public static void main(String[] args) throws Exception {
         // 请替换你自己的目录
-        String path = "D:\\idea-work-space-xcs\\spring-reading\\spring-resources\\spring-resource\\myfile.txt";
+        String path = "C:\\Users\\Admin\\IdeaProjects\\clone\\spring-reading\\spring-resources\\spring-resource\\myfile.txt";
         Resource resource = new FileSystemResource(path);
         try (InputStream is = resource.getInputStream()) {
             // 读取和处理资源内容

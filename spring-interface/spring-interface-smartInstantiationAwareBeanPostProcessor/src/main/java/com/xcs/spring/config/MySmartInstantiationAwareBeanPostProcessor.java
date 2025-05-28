@@ -15,6 +15,13 @@ import java.util.stream.Collectors;
  **/
 public class MySmartInstantiationAwareBeanPostProcessor implements SmartInstantiationAwareBeanPostProcessor {
 
+    /**
+     * 确定给定 Bean 的候选构造函数
+     * @param beanClass the raw class of the bean (never {@code null})
+     * @param beanName the name of the bean
+     * @return
+     * @throws BeansException
+     */
     @Override
     public Constructor<?>[] determineCandidateConstructors(Class<?> beanClass, String beanName) throws BeansException {
         // 首先，查找@MyAutowired带注释的构造函数

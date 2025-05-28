@@ -34,6 +34,8 @@
 ### 四、接口源码
 
 ```java
+import org.springframework.beans.factory.NoSuchBeanDefinitionException;
+
 /**
  * {@link BeanFactory}接口的扩展，由可以枚举其所有bean实例而不是按名称一个个查找bean的工厂实现。
  * 预加载所有bean定义（例如基于XML的工厂）的BeanFactory可以实现此接口。

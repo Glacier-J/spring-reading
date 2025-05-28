@@ -31,7 +31,7 @@ public class MyService {
         this.myServiceB = serviceB;
     }
 
-    @MyAutowired
+//    @MyAutowired
     public MyService(MyServiceA serviceA, MyServiceB serviceB) {
         System.out.println("Constructor with ServiceA and ServiceB used");
         this.myServiceA = serviceA;

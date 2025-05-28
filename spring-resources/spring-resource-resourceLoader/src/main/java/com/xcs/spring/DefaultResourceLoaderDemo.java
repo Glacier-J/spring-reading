@@ -16,7 +16,7 @@ public class DefaultResourceLoaderDemo {
         System.out.println("Classpath Exists= " + classpathResource.exists());
 
         // 加载文件系统中的资源
-        Resource fileResource = loader.getResource("file:/idea-work-space-xcs/spring-reading/spring-resources/spring-resource-resourceLoader/myfile1.txt");
+        Resource fileResource = loader.getResource("file:C:\\Users\\Admin\\IdeaProjects\\clone\\spring-reading\\spring-resources\\spring-resource-resourceLoader\\myfile1.txt");
         System.out.println("File Exists = " + fileResource.exists());
     }
 }
