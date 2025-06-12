@@ -46,5 +46,9 @@ public class BeanDefinitionRegistryDemo {
         // 移除Bean定义
         beanFactory.removeBeanDefinition("myBean");
         System.out.println("Bean定义已被移除(myBean)");
+
+        // 检查Bean定义是否存在
+        boolean containsBeanDefinition2 = beanFactory.containsBeanDefinition("myBean");
+        System.out.println("Bean定义是否包含(myBean) = " + containsBeanDefinition2);
     }
 }

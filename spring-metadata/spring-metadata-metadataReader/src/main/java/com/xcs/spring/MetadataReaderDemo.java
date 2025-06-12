@@ -1,5 +1,6 @@
 package com.xcs.spring;
 
+import com.xcs.spring.bean.MyBean;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.core.annotation.MergedAnnotation;
 import org.springframework.core.io.DefaultResourceLoader;
@@ -25,7 +26,8 @@ public class MetadataReaderDemo {
         // 创建 MetadataReaderFactory
         SimpleMetadataReaderFactory readerFactory = new SimpleMetadataReaderFactory();
         // 获取 MetadataReader，通常由 Spring 容器自动创建
-        MetadataReader metadataReader = readerFactory.getMetadataReader("com.xcs.spring.bean.MyBean");
+        String className = MyBean.class.getName() /*"com.xcs.spring.bean.MyBean"*/;
+        MetadataReader metadataReader = readerFactory.getMetadataReader(className);
 
         // 获取类的基本信息
         ClassMetadata classMetadata = metadataReader.getClassMetadata();

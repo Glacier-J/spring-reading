@@ -235,7 +235,7 @@ Bean定义已被移除(myBean)
 ### 七、与其他组件的关系
 
 1. **`DefaultListableBeanFactory`**
-   + `BeanDefinitionRegistry` 是`DefaultListableBeanFactory`的一个主要实现，它负责注册和管理Bean定义（`BeanDefinition`）。 `BeanFactory`是Spring的IOC容器，用于实例化和管理Bean对象。 `DefaultListableBeanFactory`可以通过 `BeanDefinitionRegistry` 来注册和获取Bean定义，然后使用这些定义来创建Bean实例。
+   + `DefaultListableBeanFactory` 是`BeanDefinitionRegistry`的一个主要实现，它负责注册和管理Bean定义（`BeanDefinition`）。 `BeanFactory`是Spring的IOC容器，用于实例化和管理Bean对象。 `DefaultListableBeanFactory`可以通过 `BeanDefinitionRegistry` 来注册和获取Bean定义，然后使用这些定义来创建Bean实例。
 2. **`GenericApplicationContext`** 
    + `GenericApplicationContext` 是`DefaultListableBeanFactory`的更高级别扩展，它不仅实现了 `DefaultListableBeanFactory` 的功能，还提供了应用程序级别的服务，如国际化、事件发布、资源加载等。 `DefaultListableBeanFactory` 通常使用 `BeanDefinitionRegistry` 来注册和管理Bean定义，以便在应用程序上下文中配置和管理Bean。
 3. **`BeanDefinition`**

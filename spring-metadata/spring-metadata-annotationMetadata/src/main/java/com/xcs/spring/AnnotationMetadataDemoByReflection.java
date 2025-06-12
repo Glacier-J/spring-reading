@@ -13,7 +13,7 @@ import java.util.Map;
 public class AnnotationMetadataDemoByReflection {
 
     public static void main(String[] args) throws Exception {
-        // 获取 AnnotationMetadata
+        // 通过Java反射 获取 AnnotationMetadata
         AnnotationMetadata annotationMetadata = AnnotationMetadata.introspect(MyBean.class);
 
         System.out.println("AnnotationMetadata impl class is " + annotationMetadata.getClass());
